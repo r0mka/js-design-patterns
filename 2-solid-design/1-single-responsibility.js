@@ -19,7 +19,7 @@ class Journal {
   toString() {
     return Object.values(this.entries).join('\n');
   }
-
+  // wrong approach
   // save(filename)
   // {
   //   fs.writeFileSync(filename, this.toString());
@@ -53,7 +53,7 @@ j.addEntry('I ate a bug.');
 console.log(j.toString());
 
 let p = new PersistenceManager();
-let filename = 'c:/temp/journal.txt';
+let filename = 'journal.txt';
 p.saveToFile(j, filename);
 
 // separation of concerns
